@@ -15,5 +15,3 @@ Hetty HTTP Utilities is a lightweight Java API primarily useful for parsing and 
 
 #### Binaries
 You can find pre-compiled releases in the 'releases' folder.
-# Hetty HTTP Utilities
-Hetty HTTP Utilities is a lightweight Java API primarily useful for parsing and creating raw HTTP requests and responses, along with sending and receiving them through TCP sockets. It gives you full control over HTTP packets that are being sent over the network and supports both HTTP and HTTPS. The project is created using eclipse and is ready to be imported. 
