@@ -58,8 +58,8 @@ public class HTTPNavigator {
 			con.openConnection();
 		
 		if (debugOutputStream != null) {
-			debugOutputStream.print(String.format("\n\n### HTTP NAVIGATOR REQUEST NR %d ###\n", requestsSent + 1).getBytes()); 
-			debugOutputStream.print(req.generatePacket(con.getURL(), applyFilters).toString().getBytes());
+			debugOutputStream.print(String.format("\n\n### HTTP NAVIGATOR REQUEST NR %d ###\n", requestsSent + 1)); 
+			debugOutputStream.print(req.generatePacket(con.getURL(), applyFilters));
 		}
 		
 		con.sendPacket(req, applyFilters);
@@ -68,8 +68,8 @@ public class HTTPNavigator {
 		res = (HTTPResponse) con.readPacket();
 		
 		if (debugOutputStream != null) {
-			debugOutputStream.print(String.format("\n\n### HTTP NAVIGATOR RESPONSE NR %d ###\n", requestsSent).getBytes()); 
-			debugOutputStream.print(res.generatePacket(null).toString().getBytes());
+			debugOutputStream.print(String.format("\n\n### HTTP NAVIGATOR RESPONSE NR %d ###\n", requestsSent)); 
+			debugOutputStream.print(res.generatePacket(null));
 		}
 		
 		List<String> locationHeaders = res.getHeaders("Location");

@@ -318,12 +318,14 @@ public class HTTPConnection {
 							}
 						}
 
-						// If no transfer decoders can decode body then throw exception
-						if (transferDecoder != null) {
-							transferDecoder.initialize (headers);
-						} else {
-							throw new HTTPUnsupportedContentException ("There were no available decoders in the list of supported decoders."
-									+ " The rest of the content will not be read by socket!", null);
+						if (!finishedBody) {
+							// If no transfer decoders can decode body then throw exception
+							if (transferDecoder != null) {
+								transferDecoder.initialize (headers);
+							} else {
+								throw new HTTPUnsupportedContentException ("There were no available decoders in the list of supported decoders."
+										+ " The rest of the content will not be read by socket!", null);
+							}
 						}
 					} else {
 						// Add header to hashmap (if it is a header)
