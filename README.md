@@ -1,6 +1,6 @@
 # Hetty HTTP Utilities
 <p align="left">
-	<a href="https://travis-ci.org/rubenchristoffer/Mklinker">
+	<a href="https://travis-ci.org/rubenchristoffer/Hetty-HTTP-Utilities">
 		<img src="https://travis-ci.org/rubenchristoffer/Hetty-HTTP-Utilities.svg?branch=master" />
 	</a>
 	<a href="../../releases/latest">
