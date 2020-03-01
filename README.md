@@ -32,3 +32,6 @@ Hetty HTTP Utilities is a lightweight Java API primarily useful for parsing and 
 
 ## Requirements
 - Requires Java 1.7 or newer
+
+## Documentation
+Javadoc is available at this project's <a href="https://rubenchristoffer.github.io/Hetty-HTTP-Utilities/">Github Pages</a>. 
