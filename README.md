@@ -19,8 +19,5 @@ Hetty HTTP Utilities is a lightweight Java API primarily useful for parsing and 
 - Uses custom unchecked exceptions so that you do not need empty try-catch statements everywhere
 
 #### Requirements
-- v2.0 Requires Java 1.7 or newer
-- v1.0 Requires Java 1.5 or newer
-
-#### Binaries
-You can find pre-compiled releases in the 'releases' folder.
+- v2.0.0 Requires Java 1.7 or newer
+- v1.0.0 Requires Java 1.5 or newer
