@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>rubenchristoffer</groupId>
   <artifactId>hetty-http-utilities</artifactId>
-  <version>2.0</version>
+  <version>2.0.0</version>
   <name>Hetty HTTP Utilities</name>
   <description>Hetty HTTP Utilities is a lightweight Java API primarily useful for parsing and creating raw HTTP requests and responses, along with sending and receiving them through TCP sockets.</description>
   <build>
