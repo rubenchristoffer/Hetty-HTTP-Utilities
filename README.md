@@ -9,6 +9,9 @@
 	<a href="../../blob/master/LICENSE">
 		<img src="https://img.shields.io/github/license/rubenchristoffer/Hetty-HTTP-Utilities.svg?style=flat" />
 	</a>
+	<a href="https://www.java.com/en/download/">
+		<img src="https://img.shields.io/badge/java%20requirement-SE%207-yellow.svg" />
+	</a>
 </p>
 
 Hetty HTTP Utilities is a lightweight Java API primarily useful for parsing and creating raw HTTP requests and responses, along with sending and receiving them through TCP sockets. It gives you full control over HTTP packets that are being sent over the network and supports both HTTP and HTTPS. The project is created using eclipse and is ready to be imported. 
@@ -30,8 +33,5 @@ Hetty HTTP Utilities is a lightweight Java API primarily useful for parsing and 
 - Built-in support for Jsoup HTML parser
 - Uses custom unchecked exceptions so that you do not need empty try-catch statements everywhere
 
-## Requirements
-- Requires Java 1.7 or newer
-
 ## Documentation
-Javadoc is available at this project's <a href="https://rubenchristoffer.github.io/Hetty-HTTP-Utilities/">Github Pages</a>. 
+Javadoc is available at this project's <a href="https://rubenchristoffer.github.io/Hetty-HTTP-Utilities/">Github Pages</a>, which can also be found in the <a href="../../tree/gh-pages">gh-pages branch</a>. 
