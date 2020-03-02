@@ -1,16 +1,19 @@
 # Hetty HTTP Utilities
 <p align="left">
 	<a href="https://travis-ci.org/rubenchristoffer/Hetty-HTTP-Utilities">
-		<img src="https://travis-ci.org/rubenchristoffer/Hetty-HTTP-Utilities.svg?branch=master" />
+		<img alt="Build" src="https://travis-ci.org/rubenchristoffer/Hetty-HTTP-Utilities.svg?branch=master" />
 	</a>
 	<a href="../../releases/latest">
-		<img src="https://img.shields.io/github/v/release/rubenchristoffer/Hetty-HTTP-Utilities.svg?style=flat" />
+		<img alt="Releases" src="https://img.shields.io/github/v/release/rubenchristoffer/Hetty-HTTP-Utilities.svg?style=flat" />
+	</a>
+	<a href="https://search.maven.org/artifact/io.github.rubenchristoffer/hetty-http-utilities">
+		<img alt="Maven Central" src="https://img.shields.io/maven-central/v/io.github.rubenchristoffer/hetty-http-utilities.svg?style=flat">
 	</a>
 	<a href="../../blob/master/LICENSE">
-		<img src="https://img.shields.io/github/license/rubenchristoffer/Hetty-HTTP-Utilities.svg?style=flat" />
+		<img alt="License" src="https://img.shields.io/github/license/rubenchristoffer/Hetty-HTTP-Utilities.svg?style=flat" />
 	</a>
 	<a href="https://www.java.com/en/download/">
-		<img src="https://img.shields.io/badge/java%20requirement-SE%207-yellow.svg" />
+		<img alt="Requires Java SE 7" src="https://img.shields.io/badge/java%20requirement-SE%207-yellow.svg" />
 	</a>
 </p>
 
