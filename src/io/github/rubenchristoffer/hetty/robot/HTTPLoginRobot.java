@@ -2,7 +2,6 @@ package io.github.rubenchristoffer.hetty.robot;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.NoSuchElementException;
@@ -83,10 +82,10 @@ public class HTTPLoginRobot {
 	
 	/**
 	 * Gets the current form data in form of a {@literal <name, value>} map.
-	 * @return read-only wrapper map of form data
+	 * @return editable map of form data
 	 */
 	public Map<String, String> getFormData () {
-		return Collections.unmodifiableMap(formData);
+		return formData;
 	}
 	
 	/**
@@ -97,14 +96,13 @@ public class HTTPLoginRobot {
 	public void updateFormData () {
 		formData.clear();
 		
-		HTMLNodeWrapper form = html.getNodeListWrapperByName("form", 
-				HTMLPredicates.HAS_ATTRIBUTE_VALUE("method", "post")).first();
+		HTMLNodeWrapper form = html.getNodeListWrapperByName("form", HTMLPredicates.HAS_ATTRIBUTE_VALUE("method", "post")).first();
 		
 		String actionURL = form.getSafeAttributeValue("action");
 		
 		if (!actionURL.isEmpty()) {
 			try {
-				navigator.setURL(new URL(actionURL));
+				navigator.setURL(new URL(navigator.getConnection().getURL(), actionURL));
 			} catch (MalformedURLException e) {
 				throw new HTTPRobotException("URL provided by 'action' attribute in form is not a valid URL", e);
 			}

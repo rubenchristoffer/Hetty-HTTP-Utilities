@@ -54,7 +54,6 @@ public class HTTPCookieValidator {
 			return false;
 		
 		// Point 2 Requirement 2
-		System.out.println(string.substring(0, string.length() - domainString.length()));
 		if (!string.substring(0, string.length() - domainString.length()).endsWith("."))
 			return false;
 		

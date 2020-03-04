@@ -2,10 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.github.rubenchristoffer</groupId>
 	<artifactId>hetty-http-utilities</artifactId>
-	<version>3.0.0</version>
+	<version>3.0.1</version>
 	<name>Hetty HTTP Utilities</name>
 	<description>Hetty HTTP Utilities is a lightweight Java API primarily useful for parsing and creating raw HTTP requests and responses, along with sending and receiving them through TCP sockets.</description>
 	<url>https://github.com/rubenchristoffer/Hetty-HTTP-Utilities</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
 	<build>
 		<sourceDirectory>src</sourceDirectory>
 		<resources>
@@ -44,9 +48,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>2.9.1</version>
-				<configuration>
-						<skip>true</skip>
-				</configuration>
 				<executions>
 					<execution>
 						<id>attach-javadocs</id>
@@ -60,9 +61,6 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
 				<version>1.5</version>
-				<configuration>
-						<skip>true</skip>
-				</configuration>
 				<executions>
 					<execution>
 						<id>sign-artifacts</id>
@@ -81,11 +79,40 @@
 				<configuration>
 					<serverId>ossrh</serverId>
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
-					<autoReleaseAfterClose>true</autoReleaseAfterClose>
+					<autoReleaseAfterClose>false</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+	<profiles>
+		<profile>
+			<id>pipelineProfile</id>
+			<activation>
+				<property>
+					<name>pipeline</name>
+					<value>true</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
 	<packaging>jar</packaging>
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
@@ -99,7 +126,7 @@
 	<licenses>
 		<license>
 			<name>MIT License</name>
-			<url>http://www.opensource.org/licenses/mit-license.php</url>
+			<url>https://github.com/rubenchristoffer/Hetty-HTTP-Utilities/blob/master/LICENSE</url>
 		</license>
 	</licenses>
 	<developers>
